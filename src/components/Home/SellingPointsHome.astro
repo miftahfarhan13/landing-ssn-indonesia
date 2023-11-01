@@ -1,0 +1,95 @@
+---
+import i18next from 'i18next';
+const lang = i18next.language;
+
+const translation: any = {
+  en: {
+    title: 'Why Choose Us?',
+    qualityTitle: 'Quality',
+    qualityDescription:
+      'Our obligation is to keep the product clean and fresh when it arrives at your home.',
+    commitTitle: 'Commitment',
+    commitDescription:
+      'Samudra Sukses Nusantara is committed to providing the best to our partners and customers.',
+    teamTitle: 'Team',
+    teamDescription:
+      'Our main strength is an honest, committed and experienced team.',
+    workTitle: 'Cooperation',
+    workDescription:
+      'Expanding the network of cooperation opportunities as far as possible for the sake of mutual prosperity.'
+  },
+  id: {
+    title: 'Mengapa Harus Memilih Kami?',
+    qualityTitle: 'Kualitas',
+    qualityDescription:
+      'Kewajiban kami adalah menjaga agar produk tetap bersih dan segar saat tiba di rumah Anda.',
+    commitTitle: 'Komitmen',
+    commitDescription:
+      'Samudra Sukses Nusantara berkomitmen untuk memberikan yang terbaik kepada mitra dan pelanggan kami.',
+    teamTitle: 'Tim',
+    teamDescription:
+      'Kekuatan utama kami adalah tim yang jujur, berkomitmen, dan berpengalaman.',
+    workTitle: 'Kerja Sama',
+    workDescription:
+      'Memperluas jaringan peluang kerja sama sejauh mungkin demi kesejahteraan bersama.'
+  }
+};
+---
+
+<div id="selling-points">
+  <div class="container py-5 d-flex flex-column gap-2">
+    <div class="position-relative d-flex flex-column mb-6">
+      <h2
+        class="title-section align-self-center"
+        style="font-family: 'Playfair Display', serif;"
+      >
+        {translation[lang].title}
+      </h2>
+      <div class="line-bg"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3 col-sm-12 d-flex flex-column align-items-center">
+        <img src="/images/kualitas.svg" alt="" class="selling-point-image" />
+        <h4>{translation[lang].qualityTitle}</h4>
+        <p class="text-center">
+          {translation[lang].qualityDescription}
+        </p>
+      </div>
+      <div class="col-md-3 col-sm-12 d-flex flex-column align-items-center">
+        <img src="/images/komitmen.svg" alt="" class="selling-point-image" />
+        <h4>{translation[lang].commitTitle}</h4>
+        <p class="text-center">
+          {translation[lang].commitDescription}
+        </p>
+      </div>
+      <div class="col-md-3 col-sm-12 d-flex flex-column align-items-center">
+        <img src="/images/tim.svg" alt="" class="selling-point-image" />
+        <h4>{translation[lang].teamTitle}</h4>
+        <p class="text-center">
+          {translation[lang].teamDescription}
+        </p>
+      </div>
+      <div class="col-md-3 col-sm-12 d-flex flex-column align-items-center">
+        <img src="/images/kerjasama.svg" alt="" class="selling-point-image" />
+        <h4>{translation[lang].workTitle}</h4>
+        <p class="text-center">
+          {translation[lang].workDescription}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  #selling-points {
+    background-color: aliceblue;
+  }
+
+  .selling-point-image {
+    width: 200px;
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+</style>

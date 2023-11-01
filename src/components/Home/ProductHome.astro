@@ -1,0 +1,27 @@
+---
+import ListProduct from './ListProduct';
+import i18next from 'i18next';
+const lang = i18next.language;
+
+const translation: any = {
+  en: {
+    title: 'List Product'
+  },
+  id: {
+    title: 'Daftar Produk'
+  }
+};
+---
+
+<div class="container py-5 d-flex flex-column gap-2">
+  <div class="position-relative d-flex flex-column mb-2">
+    <h2
+      class="title-section align-self-center"
+      style="font-family: 'Playfair Display', serif;"
+    >
+      {translation[lang].title}
+    </h2>
+    <div class="line-bg"></div>
+  </div>
+  <ListProduct lang={lang} client:load />
+</div>

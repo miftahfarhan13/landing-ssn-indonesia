@@ -1,0 +1,21 @@
+.cert-img {
+  height: 250px;
+  object-fit: contain;
+}
+
+.cert-title {
+  color: #1e293b;
+  text-align: center;
+  font-weight: bold;
+}
+
+.cert-card {
+  border-radius: 10px;
+  background-color: white;
+  transition: all 0.225s ease-in-out;
+  cursor: pointer;
+}
+
+.cert-card:hover {
+  background-color: #f8f9fa;
+}

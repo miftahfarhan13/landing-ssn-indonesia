@@ -1,0 +1,23 @@
+---
+import { categories } from '../../data/category';
+
+import i18next from 'i18next';
+const lang = i18next.language;
+---
+
+<div class="container pt-5 pb-5">
+  <div class="row">
+    {
+      categories?.map((category) => (
+        <div class="col-6 col-sm-6 col-md-3">
+          <div class="d-flex flex-column align-items-center" style="gap: 10px;">
+            <img src={category?.icon} style="height: 160px; width: auto;" />
+            <p style="font-size: 18px; font-weight: 700; font-family: 'Playfair Display', serif;">
+              {lang === 'en' ? category?.nameEn : category?.nameId}
+            </p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>

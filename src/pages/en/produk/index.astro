@@ -1,0 +1,30 @@
+---
+import i18next, { changeLanguage } from "i18next";
+import Footer from "../../../components/Footer";
+import CategoryProduct from "../../../components/Home/CategoryProduct.astro";
+import ListProduct from "../../../components/Home/ListProduct";
+import Navbar from "../../../components/Navbar.astro";
+import Layout from "../../../layouts/Layout.astro";
+
+changeLanguage("en");
+
+const lang = i18next.language;
+---
+
+<Layout title="Welcome to PT Samudra Sukses Nusantara">
+  <Navbar />
+  <div class="container py-5 d-flex flex-column gap-2">
+    <div class="position-relative d-flex flex-column mb-2">
+      <h2
+        class="title-section align-self-center"
+        style="font-family: 'Playfair Display', serif;"
+      >
+        List Product
+      </h2>
+      <div class="line-bg"></div>
+    </div>
+    <ListProduct lang={lang} client:load />
+  </div>
+  <CategoryProduct />
+  <Footer lang={lang}/>
+</Layout>

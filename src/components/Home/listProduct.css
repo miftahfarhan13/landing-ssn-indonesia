@@ -1,0 +1,33 @@
+.tab-menu {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0 auto;
+  gap: 10px;
+}
+
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s, color 0.3s;
+  user-select: none;
+  border-radius: 20px;
+}
+
+.tab:hover {
+  background-color: #0077b6;
+  color: #fff;
+}
+
+.tab.active {
+  background-color: #0077b6;
+  color: #fff;
+}
+
+.tab:not(.active):hover {
+  background-color: #caf0f8;
+  color: #0077b6;
+}
+.tab:not(.active) {
+  font-weight: 600;
+}

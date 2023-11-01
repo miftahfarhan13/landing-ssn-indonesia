@@ -1,0 +1,91 @@
+---
+import { LanguageSelector } from 'astro-i18next/components';
+import i18next from 'i18next';
+const lang = i18next.language;
+
+const translation: any = {
+  en: {
+    home: 'Home',
+    product: 'Product'
+  },
+  id: {
+    home: 'Beranda',
+    product: 'Produk'
+  }
+};
+---
+
+<nav
+  class="navbar navbar-expand-lg bg-white border-radius-sm top-0 shadow position-sticky py-3 start-0 end-0"
+  style="z-index: 3;"
+>
+  <div class="container px-1">
+    <div>
+      <img
+        src="/images/ssn-logo.png"
+        style="height: 40px; width:auto; margin-right: 20px;"
+        alt="logo"
+      />
+      <a class="navbar-brand fw-bolder ms-lg-0 d-none d-md-inline" href="/">
+        Samudra Sukses Nusantara
+      </a>
+    </div>
+    <button
+      class="navbar-toggler shadow-none ms-2"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navigation"
+      aria-controls="navigation"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon">
+        <span class="navbar-toggler-bar bar1"></span>
+        <span class="navbar-toggler-bar bar2"></span>
+        <span class="navbar-toggler-bar bar3"></span>
+      </span>
+    </button>
+    <div class="collapse navbar-collapse" id="navigation">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <div
+            class="nav-link text-dark font-weight-bold d-flex align-items-center me-2"
+          >
+            <LanguageSelector
+              showFlag={true}
+              languageMapping={{ en: 'ENG', id: 'ID' }}
+              class="form-select form-select-sm"
+            />
+          </div>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link text-dark font-weight-bold d-flex align-items-center me-2"
+            aria-current="page"
+            href="/"
+          >
+            {translation[lang].home}
+          </a>
+        </li>
+        <!-- <li class="nav-item">
+          <a
+            class="nav-link text-dark font-weight-bold d-flex align-items-center me-2"
+            aria-current="page"
+            href="/astro-ecommerce/"
+          >
+            Tentang Kami
+          </a>
+        </li> -->
+        <li class="nav-item">
+          <a
+            class="nav-link text-dark font-weight-bold d-flex align-items-center me-2"
+            aria-current="page"
+            href="/produk"
+          >
+            {translation[lang].product}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

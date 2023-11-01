@@ -1,0 +1,30 @@
+{
+  "name": "landing-ssn-indonesia",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.3.0",
+    "@astrojs/react": "^3.0.4",
+    "@types/react": "^18.2.33",
+    "@types/react-dom": "^18.2.14",
+    "aos": "^2.3.4",
+    "astro": "^3.4.0",
+    "astro-i18next": "^1.0.0-beta.21",
+    "fslightbox-react": "^1.7.6",
+    "locale-emoji": "^0.3.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "@types/aos": "^3.0.6",
+    "@types/fslightbox-react": "^1.7.5"
+  }
+}
