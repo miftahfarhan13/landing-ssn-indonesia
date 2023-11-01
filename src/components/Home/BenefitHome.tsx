@@ -1,8 +1,16 @@
-import { useEffect } from 'react';
-
+import { useEffect, useState } from 'react';
 import AOS from 'aos';
 
-export default function BenefitHome({ lang }: { lang: string }) {
+function BenefitHome({ lang }: { lang: string }) {
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    AOS.init();
+
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 100);
+  }, []);
+
   const translation: any = {
     en: {
       title: 'Our Product Advantages',
@@ -41,10 +49,6 @@ export default function BenefitHome({ lang }: { lang: string }) {
     }
   };
 
-  useEffect(() => {
-    AOS.init();
-  }, []);
-
   const productFeature = {
     images: [
       {
@@ -82,9 +86,10 @@ export default function BenefitHome({ lang }: { lang: string }) {
 
   return (
     <>
-      <div id="product-feature" className="container py-6">
-        <div className="py-5">
-          {/* <div className="row">
+      {!isLoading && (
+        <div id="product-feature" className="container py-6">
+          <div className="py-5">
+            {/* <div className="row">
           <div className="col-12 col-lg-7 mx-auto text-center">
             {title.length != 0 && <h2 className="mb-3">{title}</h2>}
             {full_description.length != 0 && (
@@ -92,21 +97,20 @@ export default function BenefitHome({ lang }: { lang: string }) {
             )}
           </div>
         </div> */}
-          <div className="row align-items-center">
-            <div className="col-12 col-lg-6 pe-5" data-aos="fade-right">
-              <div className="row">
-                <div className="position-relative d-flex flex-column mb-2">
-                  <h2
-                    className="title-section align-self-start"
-                    style={{ fontFamily: 'Playfair Display, serif' }}
-                  >
-                    {translation[lang].title}
-                  </h2>
-                  <div className="line-bg"></div>
-                </div>
-                <p className="mb-5">{translation[lang].description}</p>
-                {productFeature?.featuresDetails?.map(
-                  (value: any, index: number) => (
+            <div className="row align-items-center">
+              <div className="col-12 col-lg-6 pe-5" data-aos="fade-right">
+                <div className="row">
+                  <div className="position-relative d-flex flex-column mb-2">
+                    <h2
+                      className="title-section align-self-start"
+                      style={{ fontFamily: 'Playfair Display, serif' }}
+                    >
+                      {translation[lang].title}
+                    </h2>
+                    <div className="line-bg"></div>
+                  </div>
+                  <p className="mb-5">{translation[lang].description}</p>
+                  {productFeature?.featuresDetails?.map((value: any) => (
                     <div className="col-12">
                       <div className="d-flex mb-4">
                         <svg
@@ -133,41 +137,43 @@ export default function BenefitHome({ lang }: { lang: string }) {
                         </span>
                       </div>
                     </div>
-                  )
-                )}
+                  ))}
+                </div>
               </div>
-            </div>
-            <div className="col-12 col-lg-6" data-aos="fade-left">
-              <div className="d-block d-md-flex">
-                <img
-                  className="w-100 rounded-3 mb-4 mb-md-0"
-                  src={productFeature?.images[0].src}
-                  alt={productFeature?.images[0].alt}
-                  style={{ maxHeight: '200px', objectFit: 'cover' }}
-                />
-              </div>
-              <div className="row mt-4">
-                <div className="col-6">
+              <div className="col-12 col-lg-6" data-aos="fade-left">
+                <div className="d-block d-md-flex">
                   <img
-                    className="w-100 rounded-3"
-                    src={productFeature?.images[1].src}
-                    alt={productFeature?.images[1].alt}
+                    className="w-100 rounded-3 mb-4 mb-md-0"
+                    src={productFeature?.images[0].src}
+                    alt={productFeature?.images[0].alt}
                     style={{ maxHeight: '200px', objectFit: 'cover' }}
                   />
                 </div>
-                <div className="col-6">
-                  <img
-                    className="w-100 rounded-3"
-                    src={productFeature?.images[2].src}
-                    alt={productFeature?.images[2].alt}
-                    style={{ maxHeight: '200px', objectFit: 'cover' }}
-                  />
+                <div className="row mt-4">
+                  <div className="col-6">
+                    <img
+                      className="w-100 rounded-3"
+                      src={productFeature?.images[1].src}
+                      alt={productFeature?.images[1].alt}
+                      style={{ maxHeight: '200px', objectFit: 'cover' }}
+                    />
+                  </div>
+                  <div className="col-6">
+                    <img
+                      className="w-100 rounded-3"
+                      src={productFeature?.images[2].src}
+                      alt={productFeature?.images[2].alt}
+                      style={{ maxHeight: '200px', objectFit: 'cover' }}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
     </>
   );
 }
+
+export default BenefitHome;

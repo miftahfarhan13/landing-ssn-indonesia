@@ -4,6 +4,7 @@ export const lobsters = [
     name: 'MUD SPINY LOBSTER | PAKISTAN',
     scientificName: 'Panulirus Polyphagus',
     imageUrl: '/images/product/lobster/mud-spiny-lobster.jpg',
+    process: [],
     characteristicsEn: [
       'It has a striking body color, with the dominant color varying from red to orange. It can include yellow or purple coloring in some parts of its body.',
       'Has a body length between 20 to 30 cm. Some larger individuals can reach more than 40 cm.',
@@ -32,6 +33,7 @@ export const lobsters = [
     name: 'PRONGHORN SPINY LOBSTER | BATU',
     scientificName: 'Panulirus penicillatus',
     imageUrl: '/images/product/lobster/batu.jpg',
+    process: [],
     characteristicsEn: [
       'Has a dominant color of bright red or orange, with white or pale spots around the body. This pattern of white spots gives this lobster a "rock" appearance.',
       'Has a body length varies between 20 to 30 cm. Some larger individuals can reach more than 40 cm.',
@@ -60,6 +62,7 @@ export const lobsters = [
     name: 'CORAL SPINY LOBSTER | BATIK',
     scientificName: 'Panulirus longipes longipes',
     imageUrl: '/images/product/lobster/batik.jpg',
+    process: [],
     characteristicsEn: [
       'The head and abdomen are green and the carapace is greenish.',
       'The antennae have two pairs of antennae, one behind the other, without sharp spines.',
@@ -83,6 +86,7 @@ export const lobsters = [
     name: 'PAINTED SPINY LOBSTER | BAMBU',
     scientificName: 'Panulirus versicolor',
     imageUrl: '/images/product/lobster/bambu.jpg',
+    process: [],
     characteristicsEn: [
       'The head and ventral parts are green and the carapace is black.',
       'The color of this lobster varies, the base color is green with transverse white lines flanked by black lines.',
@@ -111,6 +115,7 @@ export const lobsters = [
     name: 'ORNATE SPINY LOBSTER | MUTIARA',
     scientificName: 'Panulirus ornatus',
     imageUrl: '/images/product/lobster/mutiara.jpg',
+    process: [],
     characteristicsEn: [
       'Almost the entire body is covered with a hard, calcareous skin framework.',
       'The skeleton of the head is very thick and covered with large and small spines.',
@@ -147,6 +152,7 @@ export const lobsters = [
     name: 'BROWN ROCK LOBSTER | PASIR ALAM',
     scientificName: 'Panulirus homarus',
     imageUrl: '/images/product/lobster/pasir-alam.jpg',
+    process: [],
     characteristicsEn: [
       'This species has a maximum body length of 31 cm with an average of 20-25 cm.',
       'The carapace is about 12 cm long.',
@@ -170,6 +176,7 @@ export const lobsters = [
     name: 'FLATHEAD LOBSTER | KIPAS HITAM',
     scientificName: 'Thenus orientalis',
     imageUrl: '/images/product/lobster/lobster-kipas-hitam.webp',
+    process: [],
     characteristicsEn: [
       'the color of the shell is dark to black. However, it can also have touches of other colors, such as red, orange, or white.',
       'has a body length between 20 to 30 cm.',
@@ -191,6 +198,7 @@ export const lobsters = [
     name: 'FLATHEAD LOBSTER | KIPAS MERAH',
     scientificName: 'Ibacus peronii',
     imageUrl: '/images/product/lobster/lobster-kipas-merah.jpeg',
+    process: [],
     characteristicsEn: [
       'The curved body shape resembles a fan. The body is flat and wide with a relatively thin and flexible shell.',
       'It has a bright red shell, which is the reason for its common name. This red color is very striking and easily recognized.',
@@ -212,6 +220,7 @@ export const lobsters = [
     name: 'FLATHEAD LOBSTER | KIPAS TANDUK',
     scientificName: 'Thenus orientalis',
     imageUrl: '/images/product/lobster/kipas-tanduk.webp',
+    process: [],
     characteristicsEn: [
       'Its curved body shape resembles a horn or long horns. The shell has a unique shape, with horns rising up.',
       'Colors that vary in color, including red, orange, brown, or yellow.',

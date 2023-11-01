@@ -1,4 +1,4 @@
-import ListCertificate from './ListCertificate/ListCertificate';
+import ListCertificate from './ListCertificate/ListCertificate.tsx';
 
 function CertificationHome({ lang }: { lang: string }) {
   return (

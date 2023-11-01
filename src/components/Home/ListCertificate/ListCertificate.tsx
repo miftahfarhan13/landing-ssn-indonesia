@@ -1,10 +1,8 @@
-// "use client";
-
+// import FsLightbox from 'fslightbox-react';
 import { useState } from 'react';
-import FsLightbox from 'fslightbox-react';
-import CertificateItem from './CertificateItem';
+import CertificateItem from './CertificateItem.tsx';
 
-export default function ListCertificate() {
+function ListCertificate() {
   const [toggler, setToggler] = useState(false);
   const [productIndex, setProductIndex] = useState(0);
   const listCertificate = [
@@ -44,21 +42,24 @@ export default function ListCertificate() {
   };
 
   return (
-    <div className="row">
-      {listCertificate.map((data, index) => (
-        <div
-          onClick={() => setToggler(!toggler)}
-          className="col-sm-12 col-md"
-          key={index}
-        >
-          <CertificateItem image={data.image} title={data.title} />
-        </div>
-      ))}
-      <FsLightbox
-        toggler={toggler}
-        sources={certificateImage}
-        key={productIndex}
-      />
-    </div>
+    <>
+      <div className="row">
+        {listCertificate.map((data, index) => (
+          <div
+            onClick={() => setToggler(!toggler)}
+            className="col-sm-12 col-md"
+          >
+            <CertificateItem image={data.image} title={data.title} />
+          </div>
+        ))}
+        {/* <FsLightbox
+          toggler={toggler}
+          sources={certificateImage}
+          key={productIndex}
+        /> */}
+      </div>
+    </>
   );
 }
+
+export default ListCertificate;

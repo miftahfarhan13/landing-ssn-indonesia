@@ -6,7 +6,7 @@ import CategoryProduct from "../components/Home/CategoryProduct.astro";
 import BenefitHome from "../components/Home/BenefitHome";
 import ProductHome from "../components/Home/ProductHome.astro";
 import SellingPointsHome from "../components/Home/SellingPointsHome.astro";
-import CertificationHome from "../components/Home/CertificationHome";
+import CertificationHome from "../components/Home/CertificationHome.tsx";
 import PromoSectionLarge from "../components/Home/PromoSectionLarge";
 import AddressHome from "../components/Home/AddressHome.astro";
 import Footer from "../components/Footer";
@@ -15,6 +15,7 @@ import i18next, { changeLanguage } from "i18next";
 changeLanguage("id");
 
 const lang = i18next.language;
+export const prerender = true;
 ---
 
 <Layout title="Welcome to PT Samudra Sukses Nusantara">
@@ -29,5 +30,3 @@ const lang = i18next.language;
   <AddressHome />
   <Footer lang={lang}/>
 </Layout>
-
-<style></style>

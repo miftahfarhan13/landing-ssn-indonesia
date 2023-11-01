@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 function CardReact() {
 	const [first, setfirst] = useState(0);

@@ -4,6 +4,7 @@ export const fish = [
     name: 'MILKFISH | IKAN BANDENG',
     scientificName: 'Chanos-Chanos',
     imageUrl: '/images/product/fish/bandeng.jpg',
+    process: [],
     characteristicsEn: [
       'It has a slightly flat and cylindrical body with a long dorsal fin. Its body is covered with small, soft scales.',
       'The body color is silvery or bluish gray with several slightly dark horizontal stripes along the sides.',
@@ -34,6 +35,7 @@ export const fish = [
     name: 'BONELESS MILKFISH | BANDENG TANPA DURI',
     scientificName: 'Chanos-Chanos',
     imageUrl: '/images/product/fish/bandeng-tanpa-duri.webp',
+    process: [],
     characteristicsEn: [
       'Milkfish that has had its spines removed still has a slightly flattened and cylindrical body shape with a long dorsal fin.',
       'The size of milkfish that has been processed without the bones can vary depending on how it is processed and how it is packaged. Usually sold in various sizes, from small filets to larger pieces.',
@@ -64,6 +66,7 @@ export const fish = [
     name: 'WHITE POMFRET | BAWAL PUTIH',
     scientificName: 'Pampus argenteus',
     imageUrl: '/images/product/fish/bawal-putih.webp',
+    process: [],
     characteristicsEn: [
       'It has a laterally flattened body shape (hunchback) with a ratio of length to height of 2: 1. This pomfret has smooth, silvery white scales, while the fins look yellowish with gray spots.',
       'It can grow to a sizeable size, with a body length of 30 to 60 cm or more under certain conditions.',
@@ -91,6 +94,7 @@ export const fish = [
     name: 'BLACK POMFRET | BAWAL HITAM',
     scientificName: 'Parastromateus niger',
     imageUrl: '/images/product/fish/bawal-hitam.png',
+    process: [],
     characteristicsEn: [
       'The black pomfret has a deep, compressed body with equally convex dorsal and abdominal profiles. This species has small, dark gray scales that cover the entire body. The fork size of the Black Pomfret is usually 30 cm, but can also reach 75 cm in length.',
       'Has a predominant body color is black or dark, although there are variations in body color.',
@@ -110,6 +114,7 @@ export const fish = [
     name: 'SPANISH MACKEREL | TENGGIRI',
     scientificName: 'Scomberomorini',
     imageUrl: '/images/product/fish/tenggiri.webp',
+    process: [],
     characteristicsEn: [
       'It can grow to a length of 240 cm and weighs about 70 kilograms. On average, these fish are considered mature after passing two years of life span or when their body length exceeds 82 cm.',
       'Colors tend to be bluish green or turquoise on top and silver on the bottom. Some individuals may have stripes or spots on their bodies.',
@@ -131,6 +136,7 @@ export const fish = [
     name: 'CUTLASS FISH | LAYUR',
     scientificName: 'Trichiurus lepturus',
     imageUrl: '/images/product/fish/layur.jpg',
+    process: [],
     characteristicsEn: [
       'This marine fish is easily recognized by its long and slender shape. Its body size can reach a length of 2 m, with a maximum recorded weight of 5 kg and an age of up to 15 years.',
       'The dark blue or greenish blue color on the upper part of the body hangs almost to the tail.',
@@ -161,6 +167,7 @@ export const fish = [
     name: 'SKIPJACK TUNA | CAKALANG',
     scientificName: 'Katsuwonus pelamis',
     imageUrl: '/images/product/fish/cakalang.jpg',
+    process: [],
     characteristicsEn: [
       'medium-sized fish from the family Scombridae (tuna). The largest skipjack, its body length can reach 1 m and weigh more than 18 kg. Most of the skipjack tuna caught are about 50 cm long.',
       'It has a long, cylindrical body with a relatively small head. The dorsal fin is long and shaped like a crescent moon, with dark spots on the top',
@@ -182,6 +189,7 @@ export const fish = [
     name: 'ALBACORE TUNA | BABY TUNA',
     scientificName: 'Thunnus alalunga',
     imageUrl: '/images/product/fish/baby-tuna.jpg',
+    process: [],
     characteristicsEn: [
       'It has a body shape that is more or less similar to a torpedo called fusiform, slightly flattened on its sides and with a tapered muzzle. Dorsal fin (dorsal) two bundles, the first dorsal fin is relatively small and separated from the second dorsal fin.',
       'The body color of baby tuna is usually similar to that of an adult tuna, with the upper part of the body tending to be blue or turquoise and the belly being a lighter silver color.',

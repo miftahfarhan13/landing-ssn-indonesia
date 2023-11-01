@@ -12,8 +12,8 @@ changeLanguage("id");
 
 const lang = i18next.language;
 export async function getStaticPaths() {
-    const product1 = crabs;
-    const products = product1.concat(shrimps, fish, lobsters);
+    const product1 = shrimps;
+    const products = product1.concat(crabs, fish, lobsters);
     return products?.map((product: any) => {
         return {
             params: { slug: product?.slug || "" },
@@ -23,6 +23,7 @@ export async function getStaticPaths() {
 }
 const { product } = Astro.props;
 const characteristics = lang === "en" ? product?.characteristicsEn : product?.characteristicsId;
+export const prerender = true;
 ---
 
 <Layout title="Welcome to PT Samudra Sukses Nusantara">
