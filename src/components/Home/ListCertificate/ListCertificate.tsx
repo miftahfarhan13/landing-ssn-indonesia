@@ -1,10 +1,8 @@
-// import FsLightbox from 'fslightbox-react';
+import { Lightbox } from 'react-modal-image';
 import { useState } from 'react';
 import CertificateItem from './CertificateItem.tsx';
 
 function ListCertificate() {
-  const [toggler, setToggler] = useState(false);
-  const [productIndex, setProductIndex] = useState(0);
   const listCertificate = [
     {
       image: '/images/cert-3.jpg',
@@ -27,6 +25,8 @@ function ListCertificate() {
       title: 'Certificate of "Good Manufacturing Practices" Shrimp Frozen'
     }
   ];
+  const [toggler, setToggler] = useState(false);
+  const [index, setIndex] = useState(0);
 
   const certificateImage = [
     '/images/cert-3.jpg',
@@ -37,21 +37,28 @@ function ListCertificate() {
   ];
 
   const handleClick = (index: number) => {
-    setToggler(!toggler);
-    setProductIndex(index);
+    setToggler(true);
+    setIndex(index);
   };
 
   return (
     <>
       <div className="row">
         {listCertificate.map((data, index) => (
-          <div
-            onClick={() => setToggler(!toggler)}
-            className="col-sm-12 col-md"
-          >
+          <div onClick={() => handleClick(index)} className="col-sm-12 col-md">
             <CertificateItem image={data.image} title={data.title} />
           </div>
         ))}
+        {toggler ? (
+          <Lightbox
+            large={listCertificate[index].image}
+            alt={listCertificate[index].title}
+            hideDownload={true}
+            onClose={() => setToggler(false)}
+          />
+        ) : (
+          <></>
+        )}
         {/* <FsLightbox
           toggler={toggler}
           sources={certificateImage}
